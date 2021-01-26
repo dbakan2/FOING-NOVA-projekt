@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <!-- <link rel="stylesheet" type="text/css" href="style/style.css"/>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script> -->
+        <title>Prijava u sustav</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="contWrap">
+                <div class="login_verticalBlueBox"></div>
+                <div class="login_contentAlign">
+                    <div class="contTitle">
+                        <h3>Prijava korisnika</h3>
+                    </div>
+                    <div class="loginForm">
+                        <form #loginForm="ngForm" id="form_login" (ngSubmit)="login()">
+                            <div class="form_login_formElm">
+                                <div class="formElm_label">
+                                    <label for="lgi_un">Operater:</label>
+                                </div>
+                                <input id="lgi_un" name="inp_operator" [(ngModel)]="model.username" type="text" 
+                                placeholder="Korisničko ime"/>
+                            </div>
+                            <div class="form_login_formElm">
+                                <div class="formElm_label">
+                                    <label for="lgi_pass">Lozinka:</label>
+                                </div>
+                                <input id="lgi_pass" name="inp_pwd" [(ngModel)]="model.password" type="password" 
+                                placeholder="Lozinka"/>
+                            </div>
+                            <div class="form_login_formElm">
+                                <a href="registration.php">Nemate račun? Registrirajte se</a>
+                            </div>
+                            <div class="form_login_formElm">
+                                <div class="floatRight">
+                                    <button name="btn_reset" class="form_login_button" type="reset">Poništi</button>
+                                    <button id="submit_btn" name="btn_submit" class="form_login_button" type="submit">
+                                        Prijava
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

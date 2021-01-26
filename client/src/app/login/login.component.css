@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    border-collapse: collapse;
+    border: 0px;
+}
+
+body { 
+    display: block;
+    font-size: 1em;
+    background-color: rgb(200, 200, 200);
+    overflow: auto;
+}
+
+div.wrapper { 
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    /*height: 100%;*/
+}
+
+div.contWrap { 
+    display: flex;
+    align-items: stretch;
+    overflow: auto;
+    margin: 100px auto 30px auto;
+    background-color: rgb(255, 255, 255);
+    min-width: 300px;
+    width: 31em;
+    max-width: 100%;
+    -webkit-box-shadow: 8px 8px 5px 5px rgb(80, 80, 80);
+    -moz-box-shadow: 8px 8px 5px 5px rgb(80, 80, 80);
+    box-shadow: 8px 8px 5px rgb(80, 80, 80);
+}
+
+div.login_verticalBlueBox { 
+    display: block;
+    overflow: hidden;
+    width: 2em;
+    /*height: 100%;*/
+    background-color: rgb(0, 22, 45);
+    float: left;
+    clear: none;
+}
+
+div.login_contentAlign { 
+    overflow: hidden;
+    display: block;
+    float: left;
+    clear: none;
+    width: calc(100% - 2em);
+}
+
+div.contTitle { 
+    display: block;
+    overflow: hidden;
+    margin: 10px;
+}
+
+div.contTitle h3 { 
+    font-family: "Arial";
+    font-size: 1.6em;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 22, 45);
+    text-align: center;
+}
+
+div.loginForm { 
+    display: block;
+    overflow: hidden;
+    float: right;
+    clear: none;
+    margin: 2em 2em 1em 2em;
+    font-family: "Arial";
+    font-weight: normal;
+    text-decoration: none;
+}
+
+div.form_login_formElm { 
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 1em 0px;
+}
+
+div.formElm_label { 
+    overflow: hidden;
+    min-width: 100px;
+    float: left;
+    clear: none;
+    margin: 0.1em 0.5em 0.1em 0px;
+}
+
+
+div.form_login_formElm label { 
+    float: right;
+    clear: none;
+    /*font-family: "Arial";*/
+    font-size: 1.4em;
+    /*font-weight: normal;
+    text-decoration: none;*/
+    color: rgb(0, 22, 45);
+}
+
+div.form_login_formElm input { 
+    /*font-family: Arial;*/
+    font-size: 1.4em;
+    /*font-weight: normal;
+    text-decoration: none;*/
+    color: rgb(0, 22, 45);
+    outline: none;
+    border-bottom: 0.1em solid rgb(0, 22, 45);
+    /*border-right: 0.1em solid rgb(0, 22, 45);*/
+    padding: 0.1em 0.2em;
+    float: left;
+    width: 12em;
+}
+
+div.form_login_formElm a { 
+    font-size: 1em;
+    color: rgb(0, 22, 45);
+    text-decoration: underline;
+    transition: color 200ms ease-in-out;
+    -webkit-transition: color 200ms ease-in-out;
+    -moz-transition: color 200ms ease-in-out;
+    -o-transition: color 200ms ease-in-out;
+}
+
+div.form_login_formElm a:hover { 
+    color: rgb(248, 126, 27);
+}
+
+
+div.floatRight { 
+    display: block;
+    float: right;
+    clear: none;
+}
+
+button.form_login_button { 
+    display: block;
+    margin: 0.5em 1em;
+    padding: 0.3em 0.8em;
+    background-color: rgb(255,255,255);
+    color: rgb(0, 22, 45);
+    outline: none;
+    border: 0.15em solid rgb(248, 126, 27);
+    float: left;
+    clear: none;
+    font-size: 1.2em;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    -webkit-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    -moz-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    -o-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    cursor: default;
+}
+
+button.form_login_button:hover { 
+    background-color: rgb(248, 126, 27);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button#submit_btn { 
+    margin-right: 0px !important;
+}
