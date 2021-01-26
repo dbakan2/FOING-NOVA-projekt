@@ -11,8 +11,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    //TODO:
-    //dovršiti metodu za update računa sa više stavaka
     public class BillsController : BaseApiController
     {
         private readonly DataContext _context;
@@ -51,7 +49,6 @@ namespace API.Controllers
        
         [HttpGet("userBills/{userId}")]
         public async Task<ActionResult> GetUserBill(int userId){
-            //tu još razmislit jel treba iz sessiona id
            var user = await _context.Users.Include(u => u.Bills).ThenInclude(b => b.Items)
            .FirstOrDefaultAsync(u => u.id == userId);
            
@@ -81,11 +78,9 @@ namespace API.Controllers
             foreach (var item in bill.Items)
             {
                 var orgItem = await _context.Items.FirstOrDefaultAsync(i => i.id == item.id);
-                // ako već postoji stavka u računu mijenjaj joj vrijednosti
                 if(orgItem != null){
                     _context.Entry(orgItem).CurrentValues.SetValues(item);
                 }
-                // ako ne postoji stavka u računu znači da je nova stavka..stavi je u račun
                 else{
                     orgBill.Items.Add(new AppItem{
                         name = item.name, 

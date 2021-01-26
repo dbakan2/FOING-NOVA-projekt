@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    //TODO: Session
     public class AccountController : BaseApiController
     {
         private readonly DataContext _context;

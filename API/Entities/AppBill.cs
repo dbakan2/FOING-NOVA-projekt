@@ -38,8 +38,6 @@ namespace API.Entities
         [StringLength(200,ErrorMessage = "Opis ne može biti duži od 200 znakova")]
         public string description { get; set; }
 
-        // public AppUser  User { get; set; }
-
         [Column("UserId")]
         public int AppUserid { get; set; }
 

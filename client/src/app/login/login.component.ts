@@ -26,5 +26,5 @@ export class LoginComponent implements OnInit {
 
   // logout(){
   //   this.loggedIn = false;
-  // }  // kod menija tamo u button stavit (click)="logout()"
+  // }  
 }

@@ -16,7 +16,6 @@ namespace API.DTOs
         public string description { get; set; }
         public int UserId { get; set; }
 
-        // [JsonIgnore]
         public virtual ICollection<ItemDto> Items { get; set; }
     }
 }
