@@ -68,14 +68,10 @@ namespace API.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> PutBills([FromBody] AppBill bill){
-            // await Task.Run(() => {
-            //     _context.Bills.Attach(bill);
-            // }); 
-            // _context.Entry(bill);
-            var orgBill = await _context.Bills.FirstOrDefaultAsync(b => b.id == bill.id);
-            _context.Entry(orgBill).CurrentValues.SetValues(bill);
-            foreach (var item in bill.Items)
+        public async Task<ActionResult> PutBills(BillDto billDto){
+            var orgBill = await _context.Bills.FirstOrDefaultAsync(b => b.id == billDto.id);
+            _context.Entry(orgBill).CurrentValues.SetValues(billDto);
+            foreach (var item in billDto.Items)
             {
                 var orgItem = await _context.Items.FirstOrDefaultAsync(i => i.id == item.id);
                 if(orgItem != null){
