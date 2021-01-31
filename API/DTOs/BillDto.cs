@@ -14,8 +14,7 @@ namespace API.DTOs
         public int partnerZipCode { get; set; }
         public string partnerCity { get; set; }
         public string description { get; set; }
-        public int UserId { get; set; }
-
+        public int AppUserid { get; set; }
         public virtual ICollection<ItemDto> Items { get; set; }
     }
 }

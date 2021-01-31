@@ -56,12 +56,12 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> PostBills([FromBody] AppBill bill)
+        public async Task<ActionResult> PostBills(BillDto billDto)
         {
             int userId = 1;
             var user = await _context.Users.FindAsync(userId);
-            bill.AppUserid  = user.id;
-            var billToSend = _mapper.Map<AppBill>(bill);
+            billDto.AppUserid  = user.id;
+            var billToSend = _mapper.Map<AppBill>(billDto);
             await _context.Bills.AddAsync(billToSend);
             await _context.SaveChangesAsync();
             return Ok();

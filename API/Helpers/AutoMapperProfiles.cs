@@ -9,8 +9,10 @@ namespace API.Helpers
         public AutoMapperProfiles()
         {
             CreateMap<AppUser, UserDto>();
-            CreateMap<AppBill, BillDto>();
-            CreateMap<AppItem, ItemDto>();
+            CreateMap<AppBill, BillDto>().ReverseMap();
+            CreateMap<AppItem, ItemDto>().ReverseMap();
+
+            // CreateMap<BillDto, AppBill>();
         }
     }
 }
